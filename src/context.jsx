@@ -19,7 +19,7 @@ export function UserProvider({ children }) {
     setList([...list,newItem])
     setUser('')
     setPassword('')
-    navigate('/dash')
+    navigate('/')
  }
   
 

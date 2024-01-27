@@ -29,8 +29,8 @@ const rows = [
 
 export default function DataTable() {
   return (
-    <div style={{ height: 650, width: '100%' }}>
-      <DataGrid
+    <div className=' px-4' style={{ height: 650, width: '100%' }}>
+      <DataGrid className='bg-white'
         rows={rows}
         columns={columns}
         initialState={{
