@@ -7,8 +7,9 @@ import {IoMdSettings} from 'react-icons/io'
 import {SiHomeassistantcommunitystore} from 'react-icons/si'
 import {FaClipboardList} from 'react-icons/fa'
 import {GiDiscGolfBag} from 'react-icons/gi'
-import { IoBarChartOutline } from "react-icons/io5"
 import { IoMdCart } from "react-icons/io";
+import { MdAnalytics } from "react-icons/md";
+import { MdMyLocation } from "react-icons/md";
 
 
 export default function Sidebar({children}) {
@@ -16,48 +17,35 @@ export default function Sidebar({children}) {
     const menuItem=[
         {
             path:'/',
-            icon:<IoBarChartOutline />
+            icon:<MdAnalytics />
+
             
+          },
+          {
+            path:'/order',
+            icon:<IoMdCart/>
           },
     
         {
           path:'/login',
           icon:<HiUsers/>
         },
-        {
-            path:'',
-            icon:<GiDiscGolfBag />
-          },
-          {
-            path:'',
-            icon:<FaClipboardList />
-          },
-          {
-            path:'',
-            icon:<SiHomeassistantcommunitystore />
-          },
-        {
-          path:'',
-          icon:<GoStarFill />
-        },
-        {
-          path:'',
-          icon:<PiClockCounterClockwiseBold />
-        },
+        
         {
             path:'',
             icon:<IoMdSettings />
           }, 
           {
-            path:'/order',
-            icon:<IoMdCart/>
-          } 
+            path:'',
+            icon:<MdMyLocation />
+          }, 
+          
     
       ]
 
 
   return (
-    <div className='flex'>
+    <div className='flex h-screen'>
         <div className='h-screen bg-white block '>
         <div className='rounded-full text-center text-white py-2 m-4 bg-blue-600 font-semibold text-xl'>D</div>
         {
