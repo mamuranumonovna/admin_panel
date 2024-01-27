@@ -36,3 +36,8 @@ body{
 .border-sw{
     box-shadow: 0px -1px 0px 0px #E5E9EB inset;
 }
+
+.active-nav-link {
+    background-color: blue;
+    color: white; /* You may want to adjust the text color for better visibility */
+}
