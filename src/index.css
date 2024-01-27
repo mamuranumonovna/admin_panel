@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background: #DCE9F9;
+}
+
+@font-face {
+    font-family: 'inter-bold';
+    src: url("./fonts/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'inter-regular';
+    src: url("./fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'inter-light';
+    src: url("./fonts/Inter-Light.ttf");
+}
+
+.inter-bold{
+    font-family: inter-bold,sans-serif;
+}
+
+.inter-regular{
+    font-family: inter-regular,sans-serif;
+}
+
+.inter-light{
+    font-family: inter-light,sans-serif;
+}
+
+.border-sw{
+    box-shadow: 0px -1px 0px 0px #E5E9EB inset;
+}

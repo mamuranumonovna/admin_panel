@@ -46,13 +46,13 @@ export default function Sidebar({children}) {
 
   return (
     <div className='flex h-screen'>
-        <div className='h-screen bg-white block '>
+        <div className='h-screen border-r-[2px] border-gray-100 bg-white block'>
         <div className='rounded-full text-center text-white py-2 m-4 bg-blue-600 font-semibold text-xl'>D</div>
         {
          menuItem.map((item,index)=>(
          <NavLink className='text-gray-500  mt-4 text-xl' to={item.path} key={index}  >
             
-            <div className='text-center mx-auto px-7 py-3 font-semibold hover:text-blue-600 hover:bg-gray-200 active:bg-gray-300 focus:bg-gray-200 focus:text-blue-600'>{item.icon}</div>
+            <div  className='text-center mx-auto px-7 py-3 font-semibold hover:text-blue-600 hover:bg-gray-200 active:bg-gray-300 focus:bg-gray-200 focus:text-blue-600'>{item.icon}</div>
          
         
          </NavLink>

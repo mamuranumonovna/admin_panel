@@ -1,43 +1,46 @@
-import React from 'react';
-import filial from '../assets/dash/Filial.svg';
-import klient from '../assets/dash/klient.svg';
-import podpiski from '../assets/dash/podpiski.svg';
-import kuryer from '../assets/dash/kuryer.svg';
-import order from '../assets/dash/order.svg'
-import topOrder from '../assets/dash/topOrder.svg';
-import average from '../assets/dash/average.svg';
-import orders from '../assets/dash/orders.svg';
-import earning from '../assets/dash/earning.svg';
-import linechart from '../assets/dash/linechart.svg';
-
-
-
-
-
+import shop from '../assets/Shop.svg'
+import user from '../assets/Users.svg'
+import notification from '../assets/notifications.svg'
+import car from '../assets/directions_car.svg'
 export default function Dashboard() {
+
   return (
-    <div>
-        <h1 className='bg-white py-4 px-4 text-xl font-semibold text-gray-700 '>Dashboard</h1>
-        <div className='flex gap-6 p-8'>
-            <img src={filial}/>
-            <img src={klient} />
-            <img src={podpiski} />
-            <img src={kuryer}/>
-        </div>
-        <div className='flex px-8 pt-2 gap-6'>
-            <img src={order}/>
-            <img src={topOrder} />
-            <img src={average} />
-        </div>
-        <div className='flex gap-4 pt-8 px-8'>
-            <div>
-                <img src={earning} />
-                <img src={orders} />
+    <div className="w-full">
+        <nav className="py-[4px] bg-white border-sw">
+            <h1 className='py-4 px-4 pl-9  text-3xl font-thin text-gray-700 inter-bold'>Dashboard</h1>
+        </nav>
+        <section className="pl-[36px] pt-[24px]">
+            <div className="flex items-center gap-[20px]">
+                <div className="flex w-[271px] rounded-[6px] bg-white justify-between px-[24px] py-[35px] items-center">
+                    <div>
+                        <span className="inter-bold font-black pb-[10px] block text-[24px] text-[#4094F7]">24</span>
+                        <h3 className="text-[#6E8BB7]">Филиалы</h3>
+                    </div>
+                    <img className="bg-[#4094F726] p-[20px] rounded-[6px]" src={shop} alt=""/>
+                </div>
+                <div className="flex w-[271px] rounded-[6px] bg-white justify-between px-[24px] py-[35px] items-center">
+                    <div>
+                        <span className="inter-bold font-black pb-[10px] block text-[24px] text-[#4094F7]">110,823</span>
+                        <h3 className="text-[#6E8BB7]">Клиенты</h3>
+                    </div>
+                    <img className="bg-[#4094F726] p-[20px] rounded-[6px]" src={user} alt=""/>
+                </div>
+                <div className="flex w-[271px] rounded-[6px] bg-white justify-between px-[24px] py-[35px] items-center">
+                    <div>
+                        <span className="inter-bold font-black pb-[10px] block text-[24px] text-[#4094F7]">110,823</span>
+                        <h3 className="text-[#6E8BB7]">Подписчики</h3>
+                    </div>
+                    <img className="bg-[#4094F726] p-[20px] rounded-[6px]" src={notification} alt=""/>
+                </div>
+                <div className="flex w-[271px] rounded-[6px] bg-white justify-between px-[24px] py-[35px] items-center">
+                    <div>
+                        <span className="inter-bold font-black pb-[10px] block text-[24px] text-[#4094F7]">75</span>
+                        <h3 className="text-[#6E8BB7]">Курьеры</h3>
+                    </div>
+                    <img className="bg-[#4094F726] p-[20px] rounded-[6px]" src={car} alt=""/>
+                </div>
             </div>
-            <div>
-                <img src={linechart} />
-            </div>
-        </div>
+        </section>
     </div>
   )
 }

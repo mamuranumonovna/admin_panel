@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, {createContext, useContext, useRef, useState} from 'react'
 import getStore from './utils/get'
 import { useNavigate } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ export function UserProvider({ children }) {
     const[list,setList]=useState(getStore('lists'));
     const[user,setUser]=useState('');
     const[password,setPassword]=useState('');
- 
+    const chartRef = useRef(null);
   
     const navigate=useNavigate();
 
@@ -30,6 +30,7 @@ export function UserProvider({ children }) {
           list,
           setList,
           user,
+          chartRef,
           setUser,
           password,
           setPassword,
