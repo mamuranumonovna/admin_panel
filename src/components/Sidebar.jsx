@@ -6,7 +6,7 @@ import { MdAnalytics, MdMyLocation } from "react-icons/md";
 import { IoMdCart } from "react-icons/io";
 
 export default function Sidebar({ children }) {
-    const location = useLocation(); // Get the current location
+    const location = useLocation(); 
     const menuItem = [
         {
             path: '/',
@@ -18,17 +18,18 @@ export default function Sidebar({ children }) {
             icon: <IoMdCart />
         },
         {
-            path: '/login',
+            path: '/client',
             icon: <HiUsers />
-        },
-        {
-            path: '',
-            icon: <IoMdSettings />
         },
         {
             path: '',
             icon: <MdMyLocation />
         },
+        {
+            path: '',
+            icon: <IoMdSettings />
+        },
+       
     ];
 
     return (

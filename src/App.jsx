@@ -8,6 +8,7 @@ import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
 import Order from './pages/Order';
 import Error from './pages/Error';
+import Client from './pages/Client';
 
 function App() {
   const { list } = useGlobalContext();
@@ -30,6 +31,7 @@ function App() {
         <Route path='/home' element={!isLoginPage && <Home />} />
         <Route path='/' element={<Dashboard/>}/>
         <Route path='/order' element={<Order/>}/>
+        <Route path='/client' element={<Client/>}/>
         <Route path='*' element={<Error/>}/>
       </Routes>
       
