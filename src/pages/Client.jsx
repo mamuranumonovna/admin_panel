@@ -47,7 +47,7 @@ export default function Client() {
           </div>
           <div className='flex items-center gap-2 text-sm text-gray-800'>
           <TfiDownload />
-          <h1>Скачать</h1>
+          <h1 className=''>Скачать</h1>
           </div>
         </div>
       </div>
