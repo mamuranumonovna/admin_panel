@@ -32,7 +32,7 @@ export default function Sidebar({ children }) {
 
     return (
         <div className='flex flex-col items-center justify-between bg-white'>
-            <div className='flex h-[86vh]'>
+            <div className='flex h-[80vh]'>
             <div className='h-screen border-r-[2px] border-gray-100 w-20  block'>
                 <div className='rounded-full text-center text-white py-2 m-4 bg-blue-600 font-semibold text-xl'>D</div>
                 <div className="bg-[#f0f3f8] w-[55px] rounded-md mx-auto flex flex-col items-center">

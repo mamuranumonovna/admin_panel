@@ -2,7 +2,39 @@ import shop from '../assets/Shop.svg'
 import user from '../assets/Users.svg'
 import notification from '../assets/notifications.svg'
 import car from '../assets/directions_car.svg'
+import { LineChart, PieChart, useDrawingArea } from '@mui/x-charts'
+import styled from '@emotion/styled'
+
 export default function Dashboard() {
+    
+    const data = [
+        { value: 5, label: 'A' },
+        { value: 10, label: 'B' },
+        { value: 15, label: 'C' },
+        { value: 20, label: 'D' },
+      ];
+      
+      const size = {
+        width: 360,
+        height: 200,
+      };
+      
+      const StyledText = styled('text')(({ theme }) => ({
+        fill: theme.palette,
+        textAnchor: 'middle',
+        dominantBaseline: 'central',
+        fontSize: 20,
+      }));
+      
+      function PieCenterLabel({ children }) {
+        const { width, height, left, top } = useDrawingArea();
+        return (
+          <StyledText x={left + width / 2} y={top + height / 2}>
+            {children}
+          </StyledText>
+        );
+      }
+      
 
   return (
     <div className="w-full">
@@ -39,6 +71,84 @@ export default function Dashboard() {
                     </div>
                     <img className="bg-[#4094F726] p-[20px] rounded-[6px]" src={car} alt=""/>
                 </div>
+            </div>
+        </section>
+        <section>
+            <div className='flex items-start p-8'>
+            <div>
+            <div className='bg-white py-2 px-2 rounded-lg mb-6'>
+            <LineChart
+  xAxis={[{ data: [0, 1.5, 2.5, 5, 8, 10] }]}
+  series={[
+    {
+      data: [1, 5.5, 2, 8.5, 1.5, 5],
+      area: true,
+      color:'#F8DD4E'
+    },
+  ]}
+  width={350}
+  height={200}
+/>
+            </div>
+<div className='bg-white py-2 px-2 rounded-lg mb-6'>
+<LineChart
+  xAxis={[{ data: [0, 1.5, 2.5, 5, 8, 10] }]}
+  series={[
+    {
+      data: [1, 5.5, 2, 8.5, 1.5, 5],
+      area: true,
+      color:'#A23FEE'
+    },
+  ]}
+  width={350}
+  height={200}
+/>
+</div>
+<div className='bg-white py-2 px-1 rounded-lg'>
+<LineChart
+  xAxis={[{ data: [0, 1.5, 2.5, 5, 8, 10] }]}
+  series={[
+    {
+      data: [1, 5.5, 2, 8.5, 1.5, 5],
+      area: true,
+      color:"#F2271C"
+    },
+  ]}
+  width={350}
+  height={200}
+/>
+</div>
+            </div>
+<div>
+<div className='flex items-center'>
+<div className='bg-white py-2 px-2 rounded-lg ml-4'>
+<PieChart series={[{ data, innerRadius: 80 }]} {...size}>
+      <PieCenterLabel>Center label</PieCenterLabel>
+    </PieChart>
+</div>
+    <div className='bg-white py-2 px-2 rounded-lg ml-4'>
+    <PieChart series={[{ data,
+       innerRadius: 80, 
+      
+       }]} {...size}>
+      <PieCenterLabel>Center label</PieCenterLabel>
+    </PieChart>
+    </div>
+</div>
+<div className='bg-white py-4 px-2 rounded-lg ml-4 mt-4'>
+<LineChart
+  xAxis={[{ data: [0, 1.5, 2.5, 5, 8, 10] }]}
+  series={[
+    {
+      data: [1, 5.5, 2, 8.5, 1.5, 5],
+      area: true,
+    },
+  ]}
+  width={700}
+  height={400}
+/>
+</div>
+</div>
             </div>
         </section>
     </div>
