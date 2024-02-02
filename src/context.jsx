@@ -99,6 +99,8 @@ const shortcutsItems = [
   { label: 'Reset', getValue: () => [null, null] },
 ];
 
+
+
   return (
     <UserContext.Provider
       value={{
@@ -132,7 +134,8 @@ const shortcutsItems = [
           searchTerm, 
           setSearchTerm,
           handleCalendarButtonClick,
-          handleSearchChange
+          handleSearchChange,
+         
 
 
       }}

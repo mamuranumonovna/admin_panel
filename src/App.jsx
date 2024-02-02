@@ -29,7 +29,7 @@ function App() {
 
   if (!isAuthenticated && !isLoginPage) {
     return <Navigate to="/login" />;
-  }
+  };
 
   return (
     <>

@@ -30,12 +30,14 @@ const rows = [
 ];
 
 export default function DataTable() {
-  const{searchTerm}=useGlobalContext()
+  const{ searchTerm}=useGlobalContext()
   const filteredRows = rows.filter((row) => {
     return Object.values(row).some((value) =>
       String(value).toLowerCase().includes(searchTerm.toLowerCase())
     );
   });
+  
+  
   return (
     <div className=' px-4' style={{ height: 650, width: '100%' }}>
       <DataGrid className='bg-white'
